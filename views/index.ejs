@@ -57,6 +57,15 @@
       <td id="Time-Value" style=" padding-left:8px;padding-right:0px;width:220px;border: 2px solid #008866;font-size: 25px;font-family:fantasy ;"><%var date = JSON.parse(datearray)%><%=date[date.length-5]%></td>
     </tr>
     <% } %>
+    <script language='JavaScript'>
+      function getImgSize(imgSrc)
+      {
+      var newImg = new Image();
+      newImg.src = imgSrc;
+      newImg.width = '500';
+      newImg.height = '500';
+      }
+      </script>
   </table>
   <!-- Main Content -->
   <!-- <div class="container" style="text-align: left;" >
