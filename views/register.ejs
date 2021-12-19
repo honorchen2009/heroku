@@ -13,7 +13,7 @@
     <div class="container">
       <div class="row">
         <div class="col-lg-8 col-md-10 mx-auto">
-          <div class="page-heading">
+          <div class="page-heading"  style="color: orange;">
             <h1>Register a new account</h1>            
           </div>
         </div>
@@ -38,13 +38,13 @@
           <div class="control-group">
             <div class="form-group floating-label-form-group controls">
               <label>User Name</label>
-              <input type="text" class="form-control" placeholder="User Name" id="username" name="username" value="= <%= username%>">              
+              <input type="text" class="form-control" placeholder="User Name" id="username" name="username" value="<%= username %>">              
             </div>
           </div>
           <div class="control-group">
             <div class="form-group floating-label-form-group controls">
               <label>Password</label>
-              <input type="password" class="form-control" id="password" name="password" value="<%= password %>">              
+              <input type="password" class="form-control" placeholder="password" id="password" name="password" value="<%= password %>">              
             </div>
           </div>                   
           <br>          

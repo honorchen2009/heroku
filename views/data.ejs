@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<%- include('layouts/header');-%>
+
+<body>
+
+  <!-- Navigation -->
+  <%- include('layouts/navbar');-%>
+
+  <!-- Page Header -->
+  <header class="masthead" style="background-image: url('img/home-bg.jpg')">
+    <div class="overlay"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+          <div class="site-heading"  style="color: orange;">
+            <h1>Power Data</h1>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-md-10 mx-auto">
+          <!--h1>Now</h1-->
+          <% if (oneminPowerPosts.length>1) {%>
+          <div>
+              <h3 id="Watt-Text">Watt : <%var watt = JSON.parse(wattarray)%><%=watt[watt.length-1]%> kW </h3>
+          </div>
+          <div>
+              <h3 id="voltage-Text">Voltage : <%=oneminPowerPosts[oneminPowerPosts.length-1].電壓%> v</h3>
+          </div>
+          <div>
+              <h3 id="Time-Value"><%var date = JSON.parse(datearray)%><%=date[date.length-1]%></h3>
+          </div>
+          <% } %>
+        <!-- Pager -->
+        <div class="clearfix">
+          <a class="btn btn-primary float-right" href="#">Older Posts &rarr;</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <hr>
+
+  <%- include('layouts/footer');-%>
+
+  <%- include('layouts/scripts');-%>
+
+</body>
+
+</html>

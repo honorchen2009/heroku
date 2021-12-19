@@ -9,50 +9,190 @@
   <%- include('layouts/navbar');-%>
 
   <!-- Page Header -->
-  <header class="masthead" style="background-image: url('img/home-bg.jpg')">
+  <header class="masthead" style="background-image: url('img/elec.jpg')">
     <div class="overlay"></div>
     <div class="container">
       <div class="row">
         <div class="col-lg-8 col-md-10 mx-auto">
-          <div class="site-heading">
-            <h1>Clean Blog</h1>
-            <span class="subheading">A Blog Theme by Start Bootstrap</span>
+          <div class="site-heading"  style="color:white;" >
+            <h1>Power Data</h1>
           </div>
         </div>
       </div>
-    </div>
+    </div>    
   </header>
 
+  <table class="col-lg-8 col-md-10 mx-auto" style="background-color: rgb(207, 229, 252);border: 3px solid #6aafc2;border-collapse:collapse;text-align: center;" >
+    <% if (oneminPowerPosts.length>1) {%>
+    <tr>
+      <td style="border: 2px solid #008866;font-family:fantasy ;font-size: 25px;"></td>
+      <td style="border: 2px solid #008866;font-family:fantasy ;font-size: 25px;">New update</td>
+      <td style="border: 2px solid #008866;font-family:fantasy ;font-size: 25px;">1st record</td>
+      <td style="border: 2px solid #008866;font-family:fantasy ;font-size: 25px;">2nd record</td>
+      <td style="border: 2px solid #008866;font-family:fantasy ;font-size: 25px;">3th record</td>
+      <td style="border: 2px solid #008866;font-family:fantasy ;font-size: 25px;">4th record</td>
+    </tr>  
+    <tr>
+      <td id="Watt-Text" style="color:rgb(255, 145, 2); padding-left:8px;padding-right:0px;width:220px;border: 2px solid #008866;font-size: 25px;font-family:fantasy ;">Watt</td>
+      <td id="Watt-Text" style="color:rgb(255, 145, 2); padding-left:8px;padding-right:0px;width:220px;border: 2px solid #008866;font-size: 25px;font-family:fantasy ;"><%var watt = JSON.parse(wattarray)%><%=watt[watt.length-1]%> kW</td>
+      <td id="Watt-Text" style="color:rgb(255, 145, 2); padding-left:8px;padding-right:0px;width:220px;border: 2px solid #008866;font-size: 25px;font-family:fantasy ;"><%var watt = JSON.parse(wattarray)%><%=watt[watt.length-2]%> kW</td>
+      <td id="Watt-Text" style="color:rgb(255, 145, 2); padding-left:8px;padding-right:0px;width:220px;border: 2px solid #008866;font-size: 25px;font-family:fantasy ;"><%var watt = JSON.parse(wattarray)%><%=watt[watt.length-3]%> kW</td>
+      <td id="Watt-Text" style="color:rgb(255, 145, 2); padding-left:8px;padding-right:0px;width:220px;border: 2px solid #008866;font-size: 25px;font-family:fantasy ;"><%var watt = JSON.parse(wattarray)%><%=watt[watt.length-4]%> kW</td>
+      <td id="Watt-Text" style="color:rgb(255, 145, 2); padding-left:8px;padding-right:0px;width:220px;border: 2px solid #008866;font-size: 25px;font-family:fantasy ;"><%var watt = JSON.parse(wattarray)%><%=watt[watt.length-5]%> kW</td>
+    </tr>
+    <tr>
+      <td id="voltage-Text" style="color:rgba(47, 236, 0, 0.67); padding-left:8px;padding-right:0px;width:220px;border: 2px solid #008866;font-size: 25px;font-family:fantasy ;">Voltage</td>
+      <td id="voltage-Text" style="color:rgba(47, 236, 0, 0.67); padding-left:8px;padding-right:0px;width:220px;border: 2px solid #008866;font-size: 25px;font-family:fantasy ;"><%=oneminPowerPosts[oneminPowerPosts.length-1].電壓%> v</td>
+      <td id="voltage-Text" style="color:rgba(47, 236, 0, 0.67); padding-left:8px;padding-right:0px;width:220px;border: 2px solid #008866;font-size: 25px;font-family:fantasy ;"><%=oneminPowerPosts[oneminPowerPosts.length-2].電壓%> v</td>
+      <td id="voltage-Text" style="color:rgba(47, 236, 0, 0.67); padding-left:8px;padding-right:0px;width:220px;border: 2px solid #008866;font-size: 25px;font-family:fantasy ;"><%=oneminPowerPosts[oneminPowerPosts.length-3].電壓%> v</td>
+      <td id="voltage-Text" style="color:rgba(47, 236, 0, 0.67); padding-left:8px;padding-right:0px;width:220px;border: 2px solid #008866;font-size: 25px;font-family:fantasy ;"><%=oneminPowerPosts[oneminPowerPosts.length-4].電壓%> v</td>
+      <td id="voltage-Text" style="color:rgba(47, 236, 0, 0.67); padding-left:8px;padding-right:0px;width:220px;border: 2px solid #008866;font-size: 25px;font-family:fantasy ;"><%=oneminPowerPosts[oneminPowerPosts.length-5].電壓%> v</td>
+    </tr>
+    <tr>
+      <td id="Time-Value" style=" padding-left:8px;padding-right:0px;width:220px;border: 2px solid #008866;font-size: 25px;font-family:fantasy ;">Date</td>
+      <td id="Time-Value" style=" padding-left:8px;padding-right:0px;width:220px;border: 2px solid #008866;font-size: 25px;font-family:fantasy ;"><%var date = JSON.parse(datearray)%><%=date[date.length-1]%></td>
+      <td id="Time-Value" style=" padding-left:8px;padding-right:0px;width:220px;border: 2px solid #008866;font-size: 25px;font-family:fantasy ;"><%var date = JSON.parse(datearray)%><%=date[date.length-2]%></td>
+      <td id="Time-Value" style=" padding-left:8px;padding-right:0px;width:220px;border: 2px solid #008866;font-size: 25px;font-family:fantasy ;"><%var date = JSON.parse(datearray)%><%=date[date.length-3]%></td>
+      <td id="Time-Value" style=" padding-left:8px;padding-right:0px;width:220px;border: 2px solid #008866;font-size: 25px;font-family:fantasy ;"><%var date = JSON.parse(datearray)%><%=date[date.length-4]%></td>
+      <td id="Time-Value" style=" padding-left:8px;padding-right:0px;width:220px;border: 2px solid #008866;font-size: 25px;font-family:fantasy ;"><%var date = JSON.parse(datearray)%><%=date[date.length-5]%></td>
+    </tr>
+    <% } %>
+  </table>
   <!-- Main Content -->
-  <div class="container">
+  <!-- <div class="container" style="text-align: left;" >
     <div class="row">
-      <div class="col-lg-8 col-md-10 mx-auto">
-        <% for (var i = 0; i < blogposts.length; i++){ %>
-          <div class="post-preview">
-            <a href="/post/<%= blogposts[i]._id%>">
-              <h2 class="post-title">
-                <%= blogposts[i].title %>
-              </h2>
-            </a>
-            <p class="post-meta"><Posted by>
-              <a href="#"><%= blogposts[i].username %></a>
-              on <%= blogposts[i].datePosted.toDateString() %></p>
-          </div>
-          <hr>
-        <%}%>
+      <div class="col-lg-8 col-md-10 mx-auto" >
+          <% if (oneminPowerPosts.length>1) {%>
+            <div>
+                <h3 id="Watt-Text" style="color:purple;">1st Watt : <%var watt = JSON.parse(wattarray)%><%=watt[watt.length-1]%> kW  2nd Watt : <%var watt = JSON.parse(wattarray)%><%=watt[watt.length-2]%> kW</h3>
+
+            </div>
+            <div>
+                <h3 id="voltage-Text" style="color:rgb(56, 255, 6);">Voltage : <%=oneminPowerPosts[oneminPowerPosts.length-1].電壓%> v</h3>
+            </div>
+            <div>
+                <h3 id="Time-Value"><%var date = JSON.parse(datearray)%><%=date[date.length-1]%></h3>
+            </div>
+            <% } %> -->
         <!-- Pager -->
-        <div class="clearfix">
-          <a class="btn btn-primary float-right" href="#">Older Posts &rarr;</a>
-        </div>
+        <!-- <div class="clearfix"> -->
+          <!--a class="btn btn-primary float-right" href="#">Older Posts &rarr;</a-->
+        <!-- </div>
       </div>
     </div>
-  </div>
+  </div> -->
 
-  <hr>
+  <!-- <style>
+    #Watt-Text1{
+      float: right;
+    }
+
+  </style> -->
+
+  <!-- <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-md-10 mx-auto" >
+          <% if (oneminPowerPosts.length>1) {%>
+            <div>
+                <h3 id="Watt-Text1" style="color:purple;" >Watt : <%var watt = JSON.parse(wattarray)%><%=watt[watt.length-2]%> kW </h3>
+            </div>
+            <div>
+                <h3 id="voltage-Text1" style="color:rgb(56, 255, 6);">Voltage : <%=oneminPowerPosts[oneminPowerPosts.length-2].電壓%> v</h3>
+            </div>
+            <div>
+                <h3 id="Time-Value1"><%var date = JSON.parse(datearray)%><%=date[date.length-2]%></h3>
+            </div>
+            <% } %> -->
+        <!-- Pager -->
+        <!-- <div class="clearfix"> -->
+          <!--a class="btn btn-primary float-right" href="#">Older Posts &rarr;</a-->
+        <!-- </div>
+      </div>
+    </div>
+  </div> -->
+
+  
+
+  <canvas id="canvas" width=1000 height=650  ></canvas>
+  <script class="col-lg-8 col-md-10 mx-auto">
+    var canvas = document.getElementById("canvas");
+    var startX = 100;
+    var startY = 600;
+    var ctx = canvas.getContext('2d');
+    var data = [60,70,80,90];		//座標軸座標
+    var data1 = [115,116,117,118,119,120,121,122,123,124,125];
+    var point = [[0,200],[150,230],[200,190],[250,240],[300,300],[350,270],[400,500],[450,400],[500,100]];	//點座標
+    //建立座標系
+    function creat(){
+      ctx.beginPath();
+      ctx.moveTo(startX,50);
+      ctx.lineTo(startX,startY);
+      ctx.moveTo(startX,startY);
+      ctx.lineTo(650,startY);
+      ctx.closePath();
+      ctx.stroke();
+      
+
+    }
+    //填充橫縱座標
+    function insert(){
+      var x = 100;
+      var y = 600;
+      //繪製橫座標
+      for(var i in data){
+        ctx.fillText(data[i],x,y+20);
+        x += 100;
+      }
+      x = 100;
+      y = 600;
+      //繪製縱座標
+      for(var i in data1){
+        ctx.fillText(data1[i],x-20,y);
+        y -= 100;
+      }
+    }
+    //繪製折線
+    var num = 0;
+    var sh = setInterval(function(){
+      //只有第一個點重新開始繪製
+      if(num == 0)
+        ctx.beginPath();
+      //終止
+      if(num == 8){
+        clearInterval(sh);
+      }
+      var x = point[num][0];
+      var y = point[num][1];
+      //轉換座標
+      x += 100;
+      y = startY - y;
+      ctx.arc(x,y, 2, 0, 2*Math.PI);
+      //進行點的內部連線
+      if(num != 0)
+        ctx.lineTo(x,y);
+      num++;
+      ctx.moveTo(x,y);
+      ctx.strokeStyle = "#3FA7DC";
+      //連線邊框
+      ctx.stroke();
+      console.log(num);
+    }, 400);
+    creat();
+    insert();
+  </script>
 
   <%- include('layouts/footer');-%>
 
   <%- include('layouts/scripts');-%>
+
+  <script language="JavaScript">
+    function myrefresh()
+    {
+    window.location.reload();
+    }
+    setTimeout('myrefresh()',30000); //指定30秒刷新一次
+    </script>
+
 
 </body>
 

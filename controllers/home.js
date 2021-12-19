@@ -1,10 +1,12 @@
-const BlogPost = require('../models/BlogPost.js')
+const mongoose = require('mongoose');
+const Schema = mongoose.Schema
 
-module.exports = async(req,res)=>{
-    const blogposts = await BlogPost.find({}).populate('userid');
-    
-    console.log(req.session)
-    res.render('index',{
-        blogposts
-    });
-}
+const PowerSchema = new Schema({
+    功率: Number,
+    電壓: Number,
+    createdAt: Date
+});
+
+const PowerPost = mongoose.model('shellyem/nows',PowerSchema);
+
+module.exports=PowerPost
