@@ -25,35 +25,35 @@
   <table class="container" style="background-color: rgb(207, 229, 252);border: 3px solid #6aafc2;border-collapse:collapse;text-align: center;" >
     <% if (oneminPowerPosts.length>1) {%>
     <tr>
-      <td style="border: 2px solid #008866;font-family:fantasy ;"></td>
-      <td style="border: 2px solid #008866;font-family:fantasy ;">New update</td>
-      <td style="border: 2px solid #008866;font-family:fantasy ;">1st record</td>
-      <td style="border: 2px solid #008866;font-family:fantasy ;">2nd record</td>
-      < <td style="border: 2px solid #008866;font-family:fantasy ;">3th record</td>
+      <td style="border: 2px solid #008866;"></td>
+      <td style="border: 2px solid #008866;">New update</td>
+      <td style="border: 2px solid #008866;">1st record</td>
+      <td style="border: 2px solid #008866;">2nd record</td>
+      <!-- <td style="border: 2px solid #008866;font-family:fantasy ;">3th record</td> -->
       <!--td style="border: 2px solid #008866;font-family:fantasy ;">4th record</td> -->
     </tr>  
     <tr>
-      <td id="Watt-Text" style="color:rgb(255, 145, 2);border: 2px solid #008866;font-family:fantasy ;">Watt</td>
-      <td id="Watt-Text" style="color:rgb(255, 145, 2);border: 2px solid #008866;font-family:fantasy ;"><%var watt = JSON.parse(wattarray)%><%=watt[watt.length-1]%> kW</td>
-      <td id="Watt-Text" style="color:rgb(255, 145, 2);border: 2px solid #008866;font-family:fantasy ;"><%var watt = JSON.parse(wattarray)%><%=watt[watt.length-2]%> kW</td>
-      <td id="Watt-Text" style="color:rgb(255, 145, 2);border: 2px solid #008866;font-family:fantasy ;"><%var watt = JSON.parse(wattarray)%><%=watt[watt.length-3]%> kW</td>
-      <td id="Watt-Text" style="color:rgb(255, 145, 2);border: 2px solid #008866;font-family:fantasy ;"><%var watt = JSON.parse(wattarray)%><%=watt[watt.length-4]%> kW</td>
+      <td id="Watt-Text" style="color:rgb(255, 145, 2);border: 2px solid #008866;">Watt</td>
+      <td id="Watt-Text" style="color:rgb(255, 145, 2);border: 2px solid #008866;"><%var watt = JSON.parse(wattarray)%><%=watt[watt.length-1]%> kW</td>
+      <td id="Watt-Text" style="color:rgb(255, 145, 2);border: 2px solid #008866;"><%var watt = JSON.parse(wattarray)%><%=watt[watt.length-2]%> kW</td>
+      <td id="Watt-Text" style="color:rgb(255, 145, 2);border: 2px solid #008866;"><%var watt = JSON.parse(wattarray)%><%=watt[watt.length-3]%> kW</td>
+      <!-- <td id="Watt-Text" style="color:rgb(255, 145, 2);border: 2px solid #008866;font-family:fantasy ;"><%var watt = JSON.parse(wattarray)%><%=watt[watt.length-4]%> kW</td> -->
       <!-- td id="Watt-Text" style="color:rgb(255, 145, 2);border: 2px solid #008866;font-family:fantasy ;"><%var watt = JSON.parse(wattarray)%><%=watt[watt.length-5]%> kW</td> -->
     </tr>
     <tr>
-      <td id="voltage-Text" style="color:rgba(47, 236, 0, 0.67);border: 2px solid #008866;font-family:fantasy ;">Voltage</td>
-      <td id="voltage-Text" style="color:rgba(47, 236, 0, 0.67);border: 2px solid #008866;font-family:fantasy ;"><%=oneminPowerPosts[oneminPowerPosts.length-1].電壓%> v</td>
-      <td id="voltage-Text" style="color:rgba(47, 236, 0, 0.67);border: 2px solid #008866;font-family:fantasy ;"><%=oneminPowerPosts[oneminPowerPosts.length-2].電壓%> v</td>
-      <td id="voltage-Text" style="color:rgba(47, 236, 0, 0.67);border: 2px solid #008866;font-family:fantasy ;"><%=oneminPowerPosts[oneminPowerPosts.length-3].電壓%> v</td>
-      <td id="voltage-Text" style="color:rgba(47, 236, 0, 0.67);border: 2px solid #008866;font-family:fantasy ;"><%=oneminPowerPosts[oneminPowerPosts.length-4].電壓%> v</td>
+      <td id="voltage-Text" style="color:rgba(47, 236, 0, 0.67);border: 2px solid #008866;">Voltage</td>
+      <td id="voltage-Text" style="color:rgba(47, 236, 0, 0.67);border: 2px solid #008866;"><%=oneminPowerPosts[oneminPowerPosts.length-1].電壓%> v</td>
+      <td id="voltage-Text" style="color:rgba(47, 236, 0, 0.67);border: 2px solid #008866;"><%=oneminPowerPosts[oneminPowerPosts.length-2].電壓%> v</td>
+      <td id="voltage-Text" style="color:rgba(47, 236, 0, 0.67);border: 2px solid #008866;"><%=oneminPowerPosts[oneminPowerPosts.length-3].電壓%> v</td>
+      <!-- <td id="voltage-Text" style="color:rgba(47, 236, 0, 0.67);border: 2px solid #008866;font-family:fantasy ;"><%=oneminPowerPosts[oneminPowerPosts.length-4].電壓%> v</td> -->
       <!-- td id="voltage-Text" style="color:rgba(47, 236, 0, 0.67);border: 2px solid #008866;font-family:fantasy ;"><%=oneminPowerPosts[oneminPowerPosts.length-5].電壓%> v</td> -->
     </tr>
     <tr>
-      <td id="Time-Value" style="border: 2px solid #008866;font-family:fantasy ;">Date</td>
-      <td id="Time-Value" style="border: 2px solid #008866;font-family:fantasy ;"><%var date = JSON.parse(datearray)%><%=date[date.length-1]%></td>
-      <td id="Time-Value" style="border: 2px solid #008866;font-family:fantasy ;"><%var date = JSON.parse(datearray)%><%=date[date.length-2]%></td>
-      <td id="Time-Value" style="border: 2px solid #008866;font-family:fantasy ;"><%var date = JSON.parse(datearray)%><%=date[date.length-3]%></td>
-      <td id="Time-Value" style="border: 2px solid #008866;font-family:fantasy ;"><%var date = JSON.parse(datearray)%><%=date[date.length-4]%></td>
+      <td id="Time-Value" style="border: 2px solid #008866;">Date</td>
+      <td id="Time-Value" style="border: 2px solid #008866;"><%var date = JSON.parse(datearray)%><%=date[date.length-1]%></td>
+      <td id="Time-Value" style="border: 2px solid #008866;"><%var date = JSON.parse(datearray)%><%=date[date.length-2]%></td>
+      <td id="Time-Value" style="border: 2px solid #008866;"><%var date = JSON.parse(datearray)%><%=date[date.length-3]%></td>
+      <!-- <td id="Time-Value" style="border: 2px solid #008866;font-family:fantasy ;"><%var date = JSON.parse(datearray)%><%=date[date.length-4]%></td> -->
       <!-- td id="Time-Value" style="border: 2px solid #008866;font-family:fantasy ;"><%var date = JSON.parse(datearray)%><%=date[date.length-5]%></td> -->
     </tr>
     <% } %>
