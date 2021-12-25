@@ -65,7 +65,7 @@ app.get('/', async(req, res) => {
         datearray.push((oneminPowerPosts[i].createdAt.getYear()+1900)+"-"
         +(oneminPowerPosts[i].createdAt.getMonth()+1)+"-"
         +oneminPowerPosts[i].createdAt.getDate()+" "
-        +oneminPowerPosts[i].createdAt.getHours()+":"
+        +(oneminPowerPosts[i].createdAt.getHours()+8)+":"
         +oneminPowerPosts[i].createdAt.getMinutes()+":"
         +oneminPowerPosts[i].createdAt.getSeconds())
     }
