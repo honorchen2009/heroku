@@ -59,9 +59,11 @@ app.listen(port);
 app.get('/', async(req, res) => {
     const oneminPowerPosts = await PowerPost.find({})
     var wattarray = [];
+    var voltage = [];
     var datearray = [];
-    for(var i =oneminPowerPosts.length-10;i<oneminPowerPosts.length;i++){
+    for(var i =oneminPowerPosts.length-5;i<oneminPowerPosts.length;i++){
         wattarray.push(oneminPowerPosts[i].功率);
+        voltage.push(oneminPowerPosts[i].電壓);
         datearray.push((oneminPowerPosts[i].createdAt.getYear()+1900)+"-"
         +(oneminPowerPosts[i].createdAt.getMonth()+1)+"-"
         +oneminPowerPosts[i].createdAt.getDate()+" "
@@ -70,11 +72,13 @@ app.get('/', async(req, res) => {
         +oneminPowerPosts[i].createdAt.getSeconds())
     }
     wattarray = JSON.stringify(wattarray);
+    voltage = JSON.stringify(voltage);
     datearray = JSON.stringify(datearray);  
     res.render('index',{
         oneminPowerPosts:oneminPowerPosts,
-        wattarray:wattarray,
-        datearray:datearray
+        wattarrays:wattarray,
+        voltages:voltage,
+        datearrays:datearray
     });
 })
 app.get('/post/:id',getPostController)
